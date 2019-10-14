@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bài tập lớn</title>
+    <link rel="stylesheet" href="btl.css">
+</head>
+
+<body onload="main()">
+  <div class="card">
+    <h2>Chọn góc nhìn</h2>
+    
+    <ul>
+      <li>
+        <input type="radio" name="name" id="one" onclick="nhinNghieng()" checked />
+        <label for="one">Nhìn nghiêng</label>
+        
+        <div class="check"></div>
+      </li>
+      
+      <li>
+        <input type="radio" name="name" id="two" onclick="nhinDuoi()" />
+        <label for="two">Nhìn từ trên xuống</label>
+        
+        <div class="check"></div>
+      </li>
+    </ul>
+
+    <h2>Ánh sáng</h2>
+    LightX<input type="range" id="lightX" min="0.0" max="5" value="0.5">
+    LightY<input type="range" id="lightY" min="1" max="10" value="3">
+    LightZ<input type="range" id="lightZ" min="1" max="10" value="4">
+  </div>
+
+    <div id="center">
+        <canvas id="webgl" width="500" height="500">
+        </canvas>
+    </div>
+
+    <div class="card1">
+        <h2>Chiếu phối cảnh</h2>
+        
+        <ul>
+          <li>
+            <input type="radio" name="name" id="one1" onclick="nhinGan()"/>
+            <label for="one1">Phóng to</label>
+            
+            <div class="check1"></div>
+          </li>
+          
+          <li>
+            <input type="radio" name="name" id="two1" onclick="nhinXa()"/>
+            <label for="two1">Thu nhỏ</label>
+            
+            <div class="check1"></div>
+          </li>
+          
+        </ul>
+
+        <h2>Tốc độ xoay</h2>
+        <input type="number" id="speed" placeholder="Nhập giá trị speed...">
+
+      </div>
+
+    <button class="animateFast" id="btnRight" type="button" onclick="right()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>Xoay theo trục Oy</button>
+
+    <button class="animateSlow" id="btnUp" type="button" onclick="up()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>Xoay theo trục Ox</button>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="btl.js"></script>
+</body>
+
+</html>
