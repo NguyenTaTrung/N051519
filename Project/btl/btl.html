@@ -27,10 +27,13 @@
       </li>
     </ul>
 
-    <h2>Ánh sáng</h2>
-    LightX<input type="range" id="lightX" min="0.0" max="5" value="0.5">
-    LightY<input type="range" id="lightY" min="1" max="10" value="3">
-    LightZ<input type="range" id="lightZ" min="1" max="10" value="4">
+    <h2>Hướng sáng</h2>
+    LightX<input type="range" id="lightX" min="0.0" max="5" value="0.5" step="0.1">
+    LightY<input type="range" id="lightY" min="1" max="10" value="3" step="0.1">
+    LightZ<input type="range" id="lightZ" min="1" max="10" value="4" step="0.1">
+
+    <h2>Tốc độ xoay</h2>
+    <input type="number" id="speed" placeholder="Nhập giá trị speed...">
   </div>
 
     <div id="center">
@@ -58,10 +61,14 @@
           
         </ul>
 
-        <h2>Tốc độ xoay</h2>
-        <input type="number" id="speed" placeholder="Nhập giá trị speed...">
+        <h2>Chuyển màu vật</h2>
+    Red<input type="range" id="red" min="0.0" max="1.0" value="1.0" step="0.01">
+    Green<input type="range" id="green" min="0.0" max="1.0" value="1.0" step="0.01">
+    Blue<input type="range" id="blue" min="0.0" max="1.0" value="1.0" step="0.01">
 
-      </div>
+    <h2>Thay đổi ảnh</h2>
+    <input type="file" id="img" onchange="main()">
+    </div>
 
     <button class="animateFast" id="btnRight" type="button" onclick="right()">
         <span></span>
